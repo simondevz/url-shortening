@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+$cyan: hsl(180, 66%, 49%);
+$hover_cyan: #9ce3e5;
+$dark_violet: hsl(257, 27%, 26%);
+$red: hsl(0, 87%, 67%);
+$gray: hsl(0, 0%, 75%);
+$grayish_violet: hsl(257, 7%, 63%);
+$very_dark_blue: hsl(255, 11%, 22%);
+$very_dark_violet: hsl(260, 8%, 14%);
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 0 7rem;
+}
+
+button {
+  background-color: $cyan;
+  border: none;
+  color: white;
+
+  &:hover {
+    background-color: $hover_cyan;
+  }
+}
+
+nav .container {
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  .links {
+    width: 20rem;
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .nav-item {
+      color: $grayish_violet;
+      margin: auto;
+      font-size: 0.8rem;
+      font-weight: 700;
+
+      &:hover {
+        color: $dark_violet;
+      }
+    }
+  }
+
+  .buttons {
+    width: 9rem;
+
+    button {
+      width: 4rem;
+      height: 2rem;
+      border-radius: 1rem;
+    }
+
+    .login_btn {
+      background-color: transparent;
+      color: $grayish_violet;
+    }
+  }
+}
+
+.body {
+  .lower_body {
+    background-color: $gray;
+
+    .boost {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      background-image: url(../images/bg-boost-desktop.svg);
+      background-color: $dark_violet;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 3rem;
+
+      span {
+        font-weight: 900;
+        font-size: 2rem;
+        color: white;
+      }
+
+      button {
+        width: 8rem;
+        height: 2.5rem;
+        border-radius: 2rem;
+        margin: 0 auto;
+        margin-top: 1rem;
+      }
+    }
+
+    .features_container {
+      margin: 5rem 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+
+      .second {
+        transform: translateY(1.75rem);
+      }
+
+      .third {
+        transform: translateY(3.5rem);
+      }
+    }
+
+    .features {
+      width: 15rem;
+      background-color: white;
+      border-radius: 0.2rem;
+      padding: 0.75rem;
+      margin-top: 0;
+      padding-top: 0;
+      z-index: 50;
+
+      img {
+        border-radius: 50%;
+        background-color: $dark_violet;
+        width: 2rem;
+        padding: 1rem;
+        transform: translateY(-50%);
+      }
+
+      span {
+        color: $grayish_violet;
+      }
+
+      h3 {
+        font-weight: 700;
+        color: $very_dark_violet;
+        margin-top: 0;
+      }
+    }
+
+    .stats-title {
+      text-align: center;
+
+      h2 {
+        color: $very_dark_violet;
+      }
+
+      span {
+        color: $grayish_violet;
+        font-weight: 500;
+      }
+    }
+
+    .shortenedLink {
+      display: flex;
+      flex-direction: column;
+      align-content: space-around;
+
+      .outer_div {
+        padding: 0.5rem;
+        margin: 0.25rem 0;
+        background-color: white;
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          display: flex;
+          width: 60%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        .inner_div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 30%;
+
+          a {
+            color: $cyan;
+            width: 80%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+
+          button {
+            width: 4rem;
+            border-radius: 0.3rem;
+          }
+
+          button.clicked {
+            background-color: $dark_violet;
+          }
+        }
+      }
+    }
+
+    .linkForm {
+      padding: 2rem;
+      background-color: $dark_violet;
+      background-image: url("../images/bg-shorten-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: row;
+      align-content: space-between;
+      position: relative;
+      border-radius: 0.5rem;
+
+      button {
+        width: 6.5rem;
+        height: 2rem;
+        border-radius: 0.3rem;
+      }
+
+      input {
+        width: 100%;
+        margin-right: 1rem;
+        height: 2rem;
+        border: none;
+        outline: none;
+        border-radius: 0.3rem;
+        padding: 0 1rem;
+
+        &:hover {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  .upper_body .container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    width: 100vw;
+    margin-top: 3rem;
+    margin-bottom: 8rem;
+
+    img {
+      height: 20rem;
+      position: relative;
+      left: 15rem;
+    }
+
+    div {
+      max-width: 25rem;
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        color: $very_dark_violet;
+        font-weight: 900;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+        margin-top: 5rem;
+      }
+
+      .intro-text {
+        color: $grayish_violet;
+      }
+
+      .get-started-btn {
+        width: 6.5rem;
+        height: 2rem;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  background-color: $very_dark_blue;
+  padding-top: 5rem;
+
+  a,
+  .socials a {
+    text-decoration: none;
+    color: $gray;
+
+    &:hover {
+      color: $cyan;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo {
+      width: 7rem;
+      height: 2rem;
+    }
+
+    ul {
+      text-decoration: none;
+      list-style: none;
+
+      li {
+        margin: 0.4rem;
+        font-size: 0.8rem;
+      }
+
+      .header {
+        font-weight: 500;
+        color: white;
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: space-between;
+      width: 20%;
+      img {
+        width: 1rem;
+      }
+    }
+
+    .lists {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      justify-content: space-between;
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  color: wheat;
+  text-align: center;
+  margin-top: 3rem;
+  padding: 0.25rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
