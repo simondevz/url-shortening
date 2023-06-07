@@ -71,6 +71,7 @@ nav .container .links {
 @media (max-width: 720px) {
   nav .container .links {
     background-color: hsl(257, 27%, 26%);
+    display: none;
     flex-direction: column;
     align-content: center;
     padding: 0.5rem 0;
@@ -85,6 +86,14 @@ nav .container .links .nav-item-container {
   nav .container .links .nav-item-container {
     flex-direction: column;
     margin: auto;
+  }
+}
+@media (max-width: 720px) {
+  nav .container .links .hr {
+    background-color: hsl(257, 7%, 63%);
+    height: 0.1rem;
+    width: 85%;
+    margin: 0.5rem auto;
   }
 }
 nav .container .links .logo {
@@ -232,27 +241,58 @@ nav .container .buttons .login_btn {
   align-content: space-around;
 }
 .body .lower_body .shortenedLink .outer_div {
-  padding: 0.5rem;
   margin: 0.25rem 0;
-  background-color: white;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: white;
   align-items: center;
 }
+@media (max-width: 720px) {
+  .body .lower_body .shortenedLink .outer_div {
+    flex-direction: column;
+    background-color: transparent;
+  }
+}
 .body .lower_body .shortenedLink .outer_div span {
+  padding: 0.5rem;
   display: flex;
   width: 60%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  margin: 0.5rem 1rem 0.1rem 1rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+@media (max-width: 720px) {
+  .body .lower_body .shortenedLink .outer_div span {
+    background-color: white;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center;
+  }
 }
 .body .lower_body .shortenedLink .outer_div .inner_div {
+  padding: 0.5rem;
+  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 30%;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+@media (max-width: 720px) {
+  .body .lower_body .shortenedLink .outer_div .inner_div {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
 .body .lower_body .shortenedLink .outer_div .inner_div a {
   color: hsl(180, 66%, 49%);
@@ -261,9 +301,24 @@ nav .container .buttons .login_btn {
   white-space: nowrap;
   overflow: hidden;
 }
+@media (max-width: 720px) {
+  .body .lower_body .shortenedLink .outer_div .inner_div a {
+    width: 100%;
+    margin: 0.7rem auto;
+  }
+}
 .body .lower_body .shortenedLink .outer_div .inner_div button {
   width: 4rem;
   border-radius: 0.3rem;
+}
+@media (max-width: 720px) {
+  .body .lower_body .shortenedLink .outer_div .inner_div button {
+    margin: 0.7rem auto;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+    height: 2rem;
+  }
 }
 .body .lower_body .shortenedLink .outer_div .inner_div button.clicked {
   background-color: hsl(257, 27%, 26%);
@@ -315,6 +370,8 @@ nav .container .buttons .login_btn {
 @media (max-width: 720px) {
   .body .lower_body .linkForm input {
     width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
     margin: 0.5rem auto;
   }
 }
@@ -335,6 +392,16 @@ nav .container .buttons .login_btn {
   height: 20rem;
   position: relative;
   left: 15rem;
+}
+@media (max-width: 960px) {
+  .body .upper_body .container img {
+    left: 5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .body .upper_body .container img {
+    left: 10rem;
+  }
 }
 @media (max-width: 720px) {
   .body .upper_body .container img {

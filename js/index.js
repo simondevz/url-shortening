@@ -38,7 +38,6 @@ function setLinkArr(data) {
     { long: data.result.original_link, short: data.result.full_short_link },
     ...linkArr,
   ];
-  par;
 
   localStorage.setItem("dsp_shortlinks", JSON.stringify(linkArr));
 }
@@ -70,10 +69,21 @@ window.onload = () => {
   let form = document.querySelector(".linkForm");
   let linkDiv = document.querySelector(".shortenedLink");
   let transformDiv = document.querySelector(".transform_div");
+  let menu = document.querySelector("img.menu");
 
   transformDiv.style.transform = `translateY(-${
     transformDiv.childNodes[1].clientHeight / 2
   }px)`;
+
+  menu.addEventListener("click", (event) => {
+    let linkDiv = document.querySelector("div.links");
+    if (linkDiv.style.display === "none") {
+      linkDiv.style.display = "flex";
+      return;
+    }
+
+    linkDiv.style.display = "none";
+  });
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
