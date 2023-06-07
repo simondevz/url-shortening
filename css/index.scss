@@ -1,3 +1,4 @@
+@use "_breakingpoint" as bp;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
 $cyan: hsl(180, 66%, 49%);
@@ -17,6 +18,14 @@ html {
 
 .container {
   padding: 0 7rem;
+
+  @include bp.lg {
+    padding: 0 3.5rem;
+  }
+
+  @include bp.sm {
+    padding: 0 1rem;
+  }
 }
 
 button {
@@ -34,17 +43,58 @@ nav .container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+
+  @include bp.md {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include bp.md {
+      width: 100%;
+    }
+
+    .menu {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: none;
+
+      @include bp.md {
+        display: inline-block;
+      }
+    }
+  }
 
   div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    justify-content: space-between;
   }
 
   .links {
-    width: 20rem;
+    width: 100%;
+
+    @include bp.md {
+      background-color: $dark_violet;
+      flex-direction: column;
+      align-content: center;
+      padding: 0.5rem 0;
+      padding-bottom: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    .nav-item-container {
+      width: 40%;
+
+      @include bp.md {
+        flex-direction: column;
+        margin: auto;
+      }
+    }
 
     .logo {
       font-weight: 700;
@@ -56,9 +106,18 @@ nav .container {
       margin: auto;
       font-size: 0.8rem;
       font-weight: 700;
+      padding: 0 0.5rem;
 
       &:hover {
         color: $dark_violet;
+      }
+
+      @include bp.md {
+        padding: 0.5rem 0;
+
+        &:hover {
+          color: $very_dark_violet;
+        }
       }
     }
   }
@@ -66,10 +125,21 @@ nav .container {
   .buttons {
     width: 9rem;
 
+    @include bp.md {
+      width: 100%;
+      flex-direction: column;
+    }
+
     button {
       width: 4rem;
       height: 2rem;
       border-radius: 1rem;
+
+      @include bp.md {
+        margin: auto;
+        padding: 0.5rem 0;
+        width: 80%;
+      }
     }
 
     .login_btn {
@@ -97,6 +167,10 @@ nav .container {
         font-weight: 900;
         font-size: 2rem;
         color: white;
+
+        @include bp.md {
+          font-size: 1rem;
+        }
       }
 
       button {
@@ -115,6 +189,10 @@ nav .container {
       justify-content: space-between;
       align-content: center;
 
+      @include bp.md {
+        flex-direction: column;
+      }
+
       .second {
         transform: translateY(1.75rem);
       }
@@ -129,9 +207,17 @@ nav .container {
       background-color: white;
       border-radius: 0.2rem;
       padding: 0.75rem;
-      margin-top: 0;
+      margin: 0 1rem;
       padding-top: 0;
       z-index: 50;
+
+      @include bp.md {
+        max-width: 80%;
+        padding: 1rem;
+        margin: 1.7rem auto;
+        text-align: center;
+        padding-bottom: 2rem;
+      }
 
       img {
         border-radius: 50%;
@@ -226,10 +312,22 @@ nav .container {
       position: relative;
       border-radius: 0.5rem;
 
+      @include bp.md {
+        padding: 1rem;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+      }
+
       button {
         width: 6.5rem;
         height: 2rem;
         border-radius: 0.3rem;
+
+        @include bp.md {
+          width: 100%;
+          margin: 0.5rem auto;
+        }
       }
 
       input {
@@ -245,6 +343,11 @@ nav .container {
           border: none;
           outline: none;
         }
+
+        @include bp.md {
+          width: -moz-available;
+          margin: 0.5rem auto;
+        }
       }
     }
   }
@@ -257,16 +360,31 @@ nav .container {
     margin-top: 3rem;
     margin-bottom: 8rem;
 
+    @include bp.md {
+      flex-direction: column-reverse;
+    }
+
     img {
       height: 20rem;
       position: relative;
       left: 15rem;
+
+      @include bp.md {
+        height: auto;
+        left: 0;
+      }
     }
 
     div {
       max-width: 25rem;
       display: flex;
       flex-direction: column;
+
+      @include bp.md {
+        margin-top: -4rem;
+        padding-right: 2rem;
+        text-align: center;
+      }
 
       h1 {
         color: $very_dark_violet;
@@ -286,6 +404,11 @@ nav .container {
         height: 2rem;
         border-radius: 1rem;
         margin-top: 1.5rem;
+
+        @include bp.md {
+          margin: auto;
+          margin-top: 1.5rem;
+        }
       }
     }
   }
@@ -306,6 +429,10 @@ footer {
     &:hover {
       color: $cyan;
     }
+
+    @include bp.md {
+      margin: 0 auto;
+    }
   }
 
   .container {
@@ -313,14 +440,27 @@ footer {
     flex-direction: row;
     justify-content: space-between;
 
+    @include bp.md {
+      flex-direction: column;
+    }
+
     .logo {
       width: 7rem;
       height: 2rem;
+
+      @include bp.md {
+        margin: -2rem auto 2rem auto;
+      }
     }
 
     ul {
       text-decoration: none;
       list-style: none;
+
+      @include bp.md {
+        position: relative;
+        left: -1rem;
+      }
 
       li {
         margin: 0.4rem;
@@ -337,6 +477,13 @@ footer {
       display: flex;
       justify-content: space-between;
       width: 20%;
+
+      @include bp.md {
+        align-content: space-around;
+        width: 50%;
+        margin: auto;
+      }
+
       img {
         width: 1rem;
       }
@@ -347,6 +494,13 @@ footer {
       flex-direction: row;
       width: 60%;
       justify-content: space-between;
+
+      @include bp.md {
+        flex-direction: column;
+        width: -moz-available;
+        margin: auto;
+        text-align: center;
+      }
     }
   }
 }

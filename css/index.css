@@ -8,6 +8,16 @@ html {
 .container {
   padding: 0 7rem;
 }
+@media (max-width: 960px) {
+  .container {
+    padding: 0 3.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
 
 button {
   background-color: hsl(180, 66%, 49%);
@@ -23,16 +33,59 @@ nav .container {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+@media (max-width: 720px) {
+  nav .container {
+    height: auto;
+    flex-direction: column;
+  }
+}
+nav .container .img {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+@media (max-width: 720px) {
+  nav .container .img {
+    width: 100%;
+  }
+}
+nav .container .img .menu {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+}
+@media (max-width: 720px) {
+  nav .container .img .menu {
+    display: inline-block;
+  }
 }
 nav .container div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  justify-content: space-between;
 }
 nav .container .links {
-  width: 20rem;
+  width: 100%;
+}
+@media (max-width: 720px) {
+  nav .container .links {
+    background-color: hsl(257, 27%, 26%);
+    flex-direction: column;
+    align-content: center;
+    padding: 0.5rem 0;
+    padding-bottom: 1.5rem;
+    border-radius: 1rem;
+  }
+}
+nav .container .links .nav-item-container {
+  width: 40%;
+}
+@media (max-width: 720px) {
+  nav .container .links .nav-item-container {
+    flex-direction: column;
+    margin: auto;
+  }
 }
 nav .container .links .logo {
   font-weight: 700;
@@ -43,17 +96,39 @@ nav .container .links .nav-item {
   margin: auto;
   font-size: 0.8rem;
   font-weight: 700;
+  padding: 0 0.5rem;
 }
 nav .container .links .nav-item:hover {
   color: hsl(257, 27%, 26%);
 }
+@media (max-width: 720px) {
+  nav .container .links .nav-item {
+    padding: 0.5rem 0;
+  }
+  nav .container .links .nav-item:hover {
+    color: hsl(260, 8%, 14%);
+  }
+}
 nav .container .buttons {
   width: 9rem;
+}
+@media (max-width: 720px) {
+  nav .container .buttons {
+    width: 100%;
+    flex-direction: column;
+  }
 }
 nav .container .buttons button {
   width: 4rem;
   height: 2rem;
   border-radius: 1rem;
+}
+@media (max-width: 720px) {
+  nav .container .buttons button {
+    margin: auto;
+    padding: 0.5rem 0;
+    width: 80%;
+  }
 }
 nav .container .buttons .login_btn {
   background-color: transparent;
@@ -78,6 +153,11 @@ nav .container .buttons .login_btn {
   font-size: 2rem;
   color: white;
 }
+@media (max-width: 720px) {
+  .body .lower_body .boost span {
+    font-size: 1rem;
+  }
+}
 .body .lower_body .boost button {
   width: 8rem;
   height: 2.5rem;
@@ -92,6 +172,11 @@ nav .container .buttons .login_btn {
   justify-content: space-between;
   align-content: center;
 }
+@media (max-width: 720px) {
+  .body .lower_body .features_container {
+    flex-direction: column;
+  }
+}
 .body .lower_body .features_container .second {
   transform: translateY(1.75rem);
 }
@@ -103,9 +188,18 @@ nav .container .buttons .login_btn {
   background-color: white;
   border-radius: 0.2rem;
   padding: 0.75rem;
-  margin-top: 0;
+  margin: 0 1rem;
   padding-top: 0;
   z-index: 50;
+}
+@media (max-width: 720px) {
+  .body .lower_body .features {
+    max-width: 80%;
+    padding: 1rem;
+    margin: 1.7rem auto;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
 }
 .body .lower_body .features img {
   border-radius: 50%;
@@ -186,10 +280,24 @@ nav .container .buttons .login_btn {
   position: relative;
   border-radius: 0.5rem;
 }
+@media (max-width: 720px) {
+  .body .lower_body .linkForm {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
 .body .lower_body .linkForm button {
   width: 6.5rem;
   height: 2rem;
   border-radius: 0.3rem;
+}
+@media (max-width: 720px) {
+  .body .lower_body .linkForm button {
+    width: 100%;
+    margin: 0.5rem auto;
+  }
 }
 .body .lower_body .linkForm input {
   width: 100%;
@@ -204,6 +312,12 @@ nav .container .buttons .login_btn {
   border: none;
   outline: none;
 }
+@media (max-width: 720px) {
+  .body .lower_body .linkForm input {
+    width: -moz-available;
+    margin: 0.5rem auto;
+  }
+}
 .body .upper_body .container {
   display: flex;
   flex-direction: row;
@@ -212,15 +326,33 @@ nav .container .buttons .login_btn {
   margin-top: 3rem;
   margin-bottom: 8rem;
 }
+@media (max-width: 720px) {
+  .body .upper_body .container {
+    flex-direction: column-reverse;
+  }
+}
 .body .upper_body .container img {
   height: 20rem;
   position: relative;
   left: 15rem;
 }
+@media (max-width: 720px) {
+  .body .upper_body .container img {
+    height: auto;
+    left: 0;
+  }
+}
 .body .upper_body .container div {
   max-width: 25rem;
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 720px) {
+  .body .upper_body .container div {
+    margin-top: -4rem;
+    padding-right: 2rem;
+    text-align: center;
+  }
 }
 .body .upper_body .container div h1 {
   color: hsl(260, 8%, 14%);
@@ -239,6 +371,12 @@ nav .container .buttons .login_btn {
   border-radius: 1rem;
   margin-top: 1.5rem;
 }
+@media (max-width: 720px) {
+  .body .upper_body .container div .get-started-btn {
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+}
 
 footer {
   display: flex;
@@ -256,18 +394,40 @@ footer a:hover,
 footer .socials a:hover {
   color: hsl(180, 66%, 49%);
 }
+@media (max-width: 720px) {
+  footer a,
+  footer .socials a {
+    margin: 0 auto;
+  }
+}
 footer .container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+@media (max-width: 720px) {
+  footer .container {
+    flex-direction: column;
+  }
+}
 footer .container .logo {
   width: 7rem;
   height: 2rem;
 }
+@media (max-width: 720px) {
+  footer .container .logo {
+    margin: -2rem auto 2rem auto;
+  }
+}
 footer .container ul {
   text-decoration: none;
   list-style: none;
+}
+@media (max-width: 720px) {
+  footer .container ul {
+    position: relative;
+    left: -1rem;
+  }
 }
 footer .container ul li {
   margin: 0.4rem;
@@ -282,6 +442,13 @@ footer .container .socials {
   justify-content: space-between;
   width: 20%;
 }
+@media (max-width: 720px) {
+  footer .container .socials {
+    align-content: space-around;
+    width: 50%;
+    margin: auto;
+  }
+}
 footer .container .socials img {
   width: 1rem;
 }
@@ -290,6 +457,14 @@ footer .container .lists {
   flex-direction: row;
   width: 60%;
   justify-content: space-between;
+}
+@media (max-width: 720px) {
+  footer .container .lists {
+    flex-direction: column;
+    width: -moz-available;
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .attribution {
