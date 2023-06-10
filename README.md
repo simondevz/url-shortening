@@ -1,2 +1,2 @@
 # url-shortening
-Created a url shorthening site designed by frontendmentor.io.
+The website I developed allows users to enter long URLs and generates shorter versions that redirect to the original ones. To design the site, I utilized resources from Frontend Mentor, a platform offering design challenges for front-end developers. By leveraging their pre-designed components, styles, and layouts, I saved time and effort in creating an attractive user interface. This allowed me to focus more on implementing the URL shortening functionality. Overall, my accomplishment showcases my ability to create a fully functional web application with URL shortening capabilities, while incorporating design elements from Frontend Mentor to enhance its visual appeal.
